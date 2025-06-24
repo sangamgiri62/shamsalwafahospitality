@@ -83,19 +83,58 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero-section text-white"
-    style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/Image/image-dubai.jpg'); background-size: cover; background-position: center; height: 600px;">
-    <div class="container h-100 d-flex align-items-center">
-      <div class="row">
-        <div class="col-lg-8 animate__animated animate__fadeIn">
-          <h1 class="display-4 fw-bold mb-3">Excellence in Hospitality Services</h1>
-          <p class="lead mb-5">"Shams Alwafa — Specialized in Hospitality, Cleaning, and International Job Services from
-            Dubai to the World."</p>
-          <a href="services.html" class="btn btn-warning btn-lg text-dark fw-medium">Our Services</a>
+  <section id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000"
+    data-bs-touch="true">
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="hero-section text-white d-flex align-items-center justify-content-center text-center"
+          style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/Image/dubai.avif'); background-size: cover; background-position: center; height: 600px;">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8 animate__animated animate__fadeIn">
+                <h1 class="display-4 fw-bold mb-3">Excellence in Hospitality Services</h1>
+                <p class="lead mb-5">"Shams Alwafa — Specialized in Hospitality, Cleaning, and International Job
+                  Services from Dubai to the World."</p>
+                <a href="services.html" class="btn btn-warning btn-lg text-dark fw-medium">Our Services</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="hero-section text-white d-flex align-items-center justify-content-center text-center"
+          style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/Image/image-dubai.jpg'); background-size: cover; background-position: center; height: 600px;">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8 animate__animated animate__fadeIn">
+                <h1 class="display-4 fw-bold mb-3">Your Global Career Starts Here</h1>
+                <p class="lead mb-5">Trusted staffing solutions and global job placement from Dubai to the world.</p>
+                <a href="contact.html" class="btn btn-warning btn-lg text-dark fw-medium">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
+
+    <!-- Swipe / Touch Navigation Buttons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </section>
+
+
 
   <!-- Introduction Section -->
   <section class="py-5 " style=" background-color: rgba(184, 126, 56, 0.25);">

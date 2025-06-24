@@ -4,9 +4,9 @@ body {
 
 /* Colors */
 :root {
-  --primary: #B87E38;    /* Navy */
-  --secondary: #F4D03F;  /* Gold */
-  --accent: #AF5E41;     /* Teal */
+  --primary: #147338;
+  --secondary: #e5c532;
+  --accent: #a98d0e;
   --light-gray: #f8f9fa;
   --dark-gray: #343a40;
 }
@@ -55,9 +55,11 @@ body {
   background-color: #e5c532;
   border-color: #e5c532;
 }
-.btn-outline-warning:hover{
-color: #fff;
+
+.btn-outline-warning:hover {
+  color: #fff;
 }
+
 .btn-info {
   background-color: var(--accent);
   border-color: var(--accent);
@@ -76,24 +78,50 @@ color: #fff;
 }
 
 .navbar-nav .nav-link {
+  position: relative;
   font-weight: 500;
   color: var(--primary);
-  padding-left: 1rem;
-  padding-right: 1rem;
+  transition: color 0.3s ease;
 }
 
+/* Hover color */
 .navbar-nav .nav-link:hover {
   color: var(--accent);
 }
 
+/* Active state color */
 .navbar-nav .nav-link.active {
-  color: var(--accent)!important;
-  border-bottom: 2px solid var(--accent);
+  color: var(--accent) !important;
 }
+
+/* Common underline setup */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Hover underline grow to 50% */
+.navbar-nav .nav-link:hover::after {
+  width: 50%;
+}
+
+/* Keep active underline always visible */
+.navbar-nav .nav-link.active::after {
+  width: 50%;
+}
+
 /* Hero Section */
 .hero-section {
   position: relative;
 }
+
 /* Create an images folder and placeholder.svg for images */
 .create-folder-placeholder {
   display: none;
@@ -106,11 +134,13 @@ color: #fff;
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 .animate__fadeIn {
   animation: fadeIn 0.5s ease-out forwards;
 }
@@ -136,12 +166,45 @@ footer a:hover {
   .hero-section {
     height: 400px !important;
   }
-  
+
   .display-4 {
     font-size: 2.5rem;
   }
-  
+
   .lead {
     font-size: 1rem;
   }
+}
+
+
+/* <!-- WhatsApp Floating Button --> */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #127338;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  font-size: 16px;
+  gap: 10px;
+  direction: ltr;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.05);
+}
+
+.whatsapp-icon {
+  font-size: 22px;
+}
+
+.whatsapp-text {
+  font-weight: 500;
 }
